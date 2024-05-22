@@ -13,6 +13,7 @@ export interface Nav {
   logo?: {
     src?: ImageWidget;
     alt?: string;
+    link?: string;
   };
   navigation?: {
     links: {
@@ -28,6 +29,7 @@ export default function Header({
     src:
       "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/67120bcd-936a-4ea5-a760-02ed5c4a3d04",
     alt: "Logo",
+    link: '/'
   },
   navigation = {
     links: [
@@ -48,7 +50,7 @@ export default function Header({
 
       {/* main content */}
       <div class="drawer-content container lg:px-0 px-4 flex gap-8 items-center justify-between py-4">
-        <a href="/">
+        <a href={logo.link || '#'}>
           <Image src={logo.src || ""} width={100} height={28} alt={logo.alt} />
         </a>
 
