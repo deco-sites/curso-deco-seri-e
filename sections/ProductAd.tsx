@@ -34,25 +34,33 @@ export interface Props{
     quote?: Quote;
     items?: ListItem[];
     text?: string;
-    loader?: LoaderGenericTypes[]
-    erFalBck?: {
-        image?: ImageWidget
-        title?: string
-    }
-
+    loader?: LoaderGenericTypes[],
 }
 
-export function ErrorFallback({error}: {error: Error}, props: Props){
+
+export function ErrorFallback({error}: {error: Error}){
+
     return (
-        <ProductAd
-            title="ErrorFallback"
-            erFalBck={ 
-                { 
-                    image: props.erFalBck?.image,
-                    title: props.erFalBck?.title ?? "Aconteceu um erro =("
-                }
-            }
-        />
+        <div class="justify-center flex flex-wrap flex-col items-center" >
+           
+            <Image
+              width={280}
+              class="w-full lg:100 object-fit"
+              sizes="(max-width: 280px) 100vw, 30vw"
+              src="https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10316/674d0c24-6481-4c3a-8209-26dee73403da"
+              alt="Erro no loader"
+              decoding="async"
+              loading="lazy"
+            />
+
+            <h1 class="text-lg my-4 decoration-red-600" >Aconteceu um erro =(</h1>
+            <h2 class="bg-slate-300 px-4 mb-4"> Aconteceu um erro no carregamento do loader. Tente carregar algum outro </h2>
+            <p class="border-orange-500 font-bold">O erro: {error?.message}</p>
+
+            <button class="bg-orange-500 text-lg decoration-white px-6 py-2 mt-4 rounded decoration-white">
+                <a href="//Cultura">Para saber mais</a>
+            </button>
+        </div>
     )
 }
 
@@ -72,12 +80,10 @@ export function LoadingFallback() {
 export default function ProductAd(props: Props){
     return(
         <div>
-            <div>
-               
-                {props.title && props.title}
+            <div class="bg-gray-200 flex-1 flex-wrap justify-center py-3 flex max-w-xl m-auto">
                 <div>
                     {props.product && 
-                        <div>
+                        <div class="">
                             <img width="150px" src={props.product.imageSrc} alt={props.product.title } /> <br />
                             Produto: {props.product.title} <br />
                             Descrição: {props.adDescription ?? (props.product.description) } <br />
@@ -85,30 +91,6 @@ export default function ProductAd(props: Props){
                         </div>
                     }
                 </div>
-                {props.loader?.length &&
-                    <div>Loader: {props.loader[0].data} </div>
-                }
-                {
-                props.title == 'ErrorFallback' &&
-                    <div>
-
-                        {props.erFalBck?.image && (
-                            <Image
-                                width={640}
-                                class="w-full lg:w-1/2 object-fit"
-                                sizes="(max-width: 640px) 100vw, 30vw"
-                                src={props.erFalBck?.image}
-                                alt={props.erFalBck?.image}
-                                decoding="async"
-                                loading="lazy"
-                                />
-                        )}
-                        {
-                            props.erFalBck?.title &&
-                            props.erFalBck?.title
-                        }
-                    </div>
-                }
             </div>
         </div>
     )
