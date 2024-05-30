@@ -11,6 +11,7 @@ export default async function apiquotables(
   _ctx: unknown,
 ): Promise<LoaderGenericTypes> {
   const time = _prop.timeToWait;
+  console.log(1111111111111111, _prop)
   // This call will hang for 5 seconds
   await fetch(`https://rich-puma-16-d8ebp0p2c7ba.deno.dev/noop?N=${time}`);
   return {

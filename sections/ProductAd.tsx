@@ -35,7 +35,7 @@ export interface Props{
     quote?: Quote;
     items?: ListItem[];
     text?: string;
-    loader?: LoaderGenericTypes[],
+    loader?: LoaderGenericTypes,
 }
 
 
@@ -66,21 +66,11 @@ export function ErrorFallback({error}: {error: Error}){
 }
 
 //Loading Fallback
-export function LoadingFallback(props: Props) {
-    console.log('PROPS LOAD', props)
+export function LoadingFallback() {
     // Renderize spinners, esqueletos e outros espaços reservados
     return (
       <div>
-        <Image
-              width={400}
-              class="w-full lg:100 object-fit"
-              sizes="(max-width: 400px) 100vw, 30vw"
-              src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-i0gdW2QzKMLBFSnoeJ3VLteO/user-w7gupM95TvH6Q5FU67UHoRYO/img-QTovYmrSBXKtVc0NUEDPNtvu.png"
-              alt="Carregando"
-              decoding="async"
-              loading="lazy"
-            />
-
+        Carregando...
       </div>
     );
   }

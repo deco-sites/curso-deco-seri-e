@@ -3,15 +3,6 @@
   "path": "/",
   "sections": [
     {
-      "__resolveType": "Preview /sections/Header.tsx"
-    },
-    {
-      "__resolveType": "site/sections/Hero.tsx",
-      "title": "<p>Click here to tweak this text however you want.</p>",
-      "cta": [],
-      "description": "This text is fully editable and ready for your personal touch. Just click here, head over to the section window, or dive straight into the code to make changes as you see fit. Whether it's about the content, formatting, font, or anything in between, editing is just a click away."
-    },
-    {
       "__resolveType": "site/sections/ProductAd.tsx",
       "section": [
         {
@@ -37,7 +28,7 @@
       "loader": [
         {
           "__resolveType": "site/loaders/slowquote.tsx",
-          "timeToWait": 3
+          "timeToWait": 2
         }
       ],
       "erFalBck": {
@@ -49,6 +40,15 @@
         "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10316/674d0c24-6481-4c3a-8209-26dee73403da",
         "title": "Deu erro aí ó"
       }
+    },
+    {
+      "__resolveType": "Preview /sections/Header.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Hero.tsx",
+      "title": "<p>Click here to tweak this text however you want.</p>",
+      "cta": [],
+      "description": "This text is fully editable and ready for your personal touch. Just click here, head over to the section window, or dive straight into the code to make changes as you see fit. Whether it's about the content, formatting, font, or anything in between, editing is just a click away."
     },
     {
       "__resolveType": "site/sections/Logos.tsx"
