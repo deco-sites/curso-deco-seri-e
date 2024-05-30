@@ -9,6 +9,7 @@ export interface Product{
     title: string;
     description?: string;
     price: string;
+    someImage?: ImageWidget;
     imageSrc: string;
 }
 
@@ -65,11 +66,21 @@ export function ErrorFallback({error}: {error: Error}){
 }
 
 //Loading Fallback
-export function LoadingFallback() {
+export function LoadingFallback(props: Props) {
+    console.log('PROPS LOAD', props)
     // Renderize spinners, esqueletos e outros espaços reservados
     return (
       <div>
-        <h2>carregando...</h2>
+        <Image
+              width={400}
+              class="w-full lg:100 object-fit"
+              sizes="(max-width: 400px) 100vw, 30vw"
+              src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-i0gdW2QzKMLBFSnoeJ3VLteO/user-w7gupM95TvH6Q5FU67UHoRYO/img-QTovYmrSBXKtVc0NUEDPNtvu.png"
+              alt="Carregando"
+              decoding="async"
+              loading="lazy"
+            />
+
       </div>
     );
   }
@@ -79,15 +90,23 @@ export function LoadingFallback() {
 
 export default function ProductAd(props: Props){
     return(
-        <div>
-            <div class="bg-gray-200 flex-1 flex-wrap justify-center py-3 flex max-w-xl m-auto">
+        <div class="flex">
+            <div class=" min-w-450 bg-gray-200 flex-shrink flex-grow-0 basis-0 flex-wrap justify-center py-3 flex m-auto rounded border-orange-500 ">
                 <div>
                     {props.product && 
-                        <div class="">
-                            <img width="150px" src={props.product.imageSrc} alt={props.product.title } /> <br />
-                            Produto: {props.product.title} <br />
-                            Descrição: {props.adDescription ?? (props.product.description) } <br />
-                            Preço: {props.product.price } <br />
+                        <div class="justify-center flex-wrap flex *:flex-shrink-0 *:flex-grow *:basis-full px-3 text-center">
+                            <div>
+                                <img src={props.product.imageSrc} alt={props.product.title } />
+                            </div>
+                            <h2 class="text-base py-2">
+                                {props.product.title}
+                            </h2>
+                            <p class="description">
+                            {props.adDescription ?? (props.product.description) }
+                            </p>
+                            <p class="text-green-400 font-bold text-lg">
+                                {props.product.price }
+                            </p>
                         </div>
                     }
                 </div>

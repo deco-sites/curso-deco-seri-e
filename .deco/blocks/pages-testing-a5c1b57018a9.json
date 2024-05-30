@@ -1,1 +1,74 @@
-{"name":"Home","path":"/","sections":[{"__resolveType":"Preview /sections/Header.tsx"},{"__resolveType":"site/sections/Hero.tsx","title":"<p>Click here to tweak this text however you want.</p>","cta":[],"description":"This text is fully editable and ready for your personal touch. Just click here, head over to the section window, or dive straight into the code to make changes as you see fit. Whether it's about the content, formatting, font, or anything in between, editing is just a click away."},{"__resolveType":"site/sections/ProductAd.tsx","section":[{"__resolveType":"Cultura Reusable"}],"adDescription":"O produto vem em uma embalagem reciclável e reutilizável, minimizando o impacto ambiental.","items":[{"color":"text-red-800","text":"asdasddasdsad"}],"quote":{"data":[]},"product":{"title":"Limpador BioClean 1232","description":"Limpador multiuso ecológico","price":"R$ 12,99","imageSrc":"https://www.thegoodtrade.com/wp-content/uploads/2024/02/nontoxic-cleaning-products-header-900x1428.jpg"},"loader":[],"erFalBck":{"image":"https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10316/674d0c24-6481-4c3a-8209-26dee73403da","title":"Aconteceu um erro no carregamento do loader =((((((((("},"text":"5","errorOptions":{"image":"https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10316/674d0c24-6481-4c3a-8209-26dee73403da","title":"Deu erro aí ó"}},{"__resolveType":"site/sections/Logos.tsx"},{"__resolveType":"site/sections/ImageWithParagraph.tsx","placement":"right"},{"__resolveType":"site/sections/ImageWithParagraph.tsx"},{"__resolveType":"site/sections/Testimonials.tsx"},{"__resolveType":"site/sections/Faq.tsx"},{"__resolveType":"Footer"}],"__resolveType":"website/pages/Page.tsx"}
+{
+  "name": "Home",
+  "path": "/",
+  "sections": [
+    {
+      "__resolveType": "Preview /sections/Header.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Hero.tsx",
+      "title": "<p>Click here to tweak this text however you want.</p>",
+      "cta": [],
+      "description": "This text is fully editable and ready for your personal touch. Just click here, head over to the section window, or dive straight into the code to make changes as you see fit. Whether it's about the content, formatting, font, or anything in between, editing is just a click away."
+    },
+    {
+      "__resolveType": "site/sections/ProductAd.tsx",
+      "section": [
+        {
+          "__resolveType": "Cultura Reusable"
+        }
+      ],
+      "adDescription": "O produto vem em uma embalagem reciclável e reutilizável, minimizando o impacto ambiental.",
+      "items": [
+        {
+          "color": "text-red-800",
+          "text": "asdasddasdsad"
+        }
+      ],
+      "quote": {
+        "data": []
+      },
+      "product": {
+        "title": "Limpador BioClean 1232",
+        "description": "Limpador multiuso ecológico",
+        "price": "R$ 12,99",
+        "imageSrc": "https://www.thegoodtrade.com/wp-content/uploads/2024/02/nontoxic-cleaning-products-header-900x1428.jpg"
+      },
+      "loader": [
+        {
+          "__resolveType": "site/loaders/slowquote.tsx",
+          "timeToWait": 3
+        }
+      ],
+      "erFalBck": {
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10316/674d0c24-6481-4c3a-8209-26dee73403da",
+        "title": "Aconteceu um erro no carregamento do loader =((((((((("
+      },
+      "text": "5",
+      "errorOptions": {
+        "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10316/674d0c24-6481-4c3a-8209-26dee73403da",
+        "title": "Deu erro aí ó"
+      }
+    },
+    {
+      "__resolveType": "site/sections/Logos.tsx"
+    },
+    {
+      "__resolveType": "site/sections/ImageWithParagraph.tsx",
+      "placement": "right"
+    },
+    {
+      "__resolveType": "site/sections/ImageWithParagraph.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Testimonials.tsx"
+    },
+    {
+      "__resolveType": "site/sections/Faq.tsx"
+    },
+    {
+      "__resolveType": "Footer"
+    }
+  ],
+  "__resolveType": "website/pages/Page.tsx"
+}

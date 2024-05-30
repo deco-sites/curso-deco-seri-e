@@ -1,8 +1,8 @@
 {
   "imports": {
     "site/": "./",
-    "deco/": "https://cdn.jsdelivr.net/gh/deco-cx/deco@1.66.13/",
-    "apps/": "https://cdn.jsdelivr.net/gh/deco-cx/apps@0.40.7/",
+    "deco/": "https://cdn.jsdelivr.net/gh/deco-cx/deco@1.69.6/",
+    "apps/": "https://cdn.jsdelivr.net/gh/deco-cx/apps@0.45.1/",
     "$fresh/": "https://deno.land/x/fresh@1.6.8/",
     "preact": "https://esm.sh/preact@10.19.6",
     "preact/": "https://esm.sh/preact@10.19.6/",
@@ -12,7 +12,7 @@
     "std/": "https://deno.land/std@0.190.0/",
     "partytown/": "https://denopkg.com/deco-cx/partytown@0.4.8/",
     "daisyui": "npm:daisyui@4.4.19",
-    "@deco/vtex": "https://denopkg.com/deco-cx/apps@0.43.2/vtex/mod.ts"
+    "@deco/vtex": "https://denopkg.com/deco-cx/apps@0.45.1/vtex/mod.ts"
   },
   "tasks": {
     "start": "deno task bundle && deno run -A --env --config=deno.json $(deno eval 'console.log(import.meta.resolve(\"deco/hypervisor/main.ts\"))') --build-cmd 'deno task build' -- deno task dev",
