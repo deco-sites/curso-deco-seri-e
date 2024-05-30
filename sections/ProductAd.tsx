@@ -12,12 +12,6 @@ export interface Product{
     someImage?: ImageWidget;
     imageSrc: string;
 }
-
-
-export interface Quote{
-    data: string[]
-}
-
 export interface ListItem {
     text: string;
     bold?: boolean;
@@ -29,12 +23,7 @@ export interface Props{
     /**
      * @title Importar Sessão
      */
-    section?: Section[];
     adDescription?: string;
-    title?: string;
-    quote?: Quote;
-    items?: ListItem[];
-    text?: string;
     loader?: LoaderGenericTypes,
 }
 
@@ -58,7 +47,7 @@ export function ErrorFallback({error}: {error: Error}){
             <h2 class="bg-slate-300 px-4 mb-4"> Aconteceu um erro no carregamento do loader. Tente carregar algum outro </h2>
             <p class="border-orange-500 font-bold">O erro: {error?.message}</p>
 
-            <button class="bg-orange-500 text-lg decoration-white px-6 py-2 mt-4 rounded decoration-white">
+            <button class="bg-orange-500 text-lg px-6 py-2 mt-4 rounded decoration-white">
                 <a href="//Cultura">Para saber mais</a>
             </button>
         </div>

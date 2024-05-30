@@ -25,12 +25,10 @@
         "price": "R$ 12,99",
         "imageSrc": "https://www.thegoodtrade.com/wp-content/uploads/2024/02/nontoxic-cleaning-products-header-900x1428.jpg"
       },
-      "loader": [
-        {
-          "__resolveType": "site/loaders/slowquote.tsx",
-          "timeToWait": 2
-        }
-      ],
+      "loader": {
+        "__resolveType": "site/loaders/slowquote.tsx",
+        "timeToWait": 3
+      },
       "erFalBck": {
         "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10316/674d0c24-6481-4c3a-8209-26dee73403da",
         "title": "Aconteceu um erro no carregamento do loader =((((((((("
